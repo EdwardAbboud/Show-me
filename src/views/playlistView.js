@@ -1,10 +1,10 @@
+// Create the welcome screen
 
-function createHomeView(props) {
-  
+function createPlaylistView(props) {
   const root = document.createElement('div');
   root.innerHTML = String.raw`${props}`;
 
   return { root };
 }
 
-export default createHomeView;
+export default createPlaylistView;
