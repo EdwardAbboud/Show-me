@@ -1,3 +1,10 @@
 {
-  "cSpell.words": ["hashchange", "IIFE", "roadmap", "thruthy", "whiteframe"]
+  "cSpell.words": [
+    "hashchange",
+    "IIFE",
+    "roadmap",
+    "thruthy",
+    "whiteframe"
+  ],
+  "liveServer.settings.port": 5501
 }

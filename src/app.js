@@ -1,8 +1,10 @@
 import data from './data.js';
 // import routes from './pages/routes.js'
-import routes from './example/pages/routes.js';
+import routes from '../src/pages/routes.js';
 import router from './lib/router.js';
 import log from './lib/logger.js';
+import { createNavbar } from './components/navbar.js';
+
 
 function loadApp() {
   // Set the desired log level
@@ -19,6 +21,9 @@ function loadApp() {
 
   // Start the router
   router.start(routes, routerOutlet, data);
+
+  // Initialize the navbar
+  createNavbar();
 }
 
 window.addEventListener('load', loadApp);
