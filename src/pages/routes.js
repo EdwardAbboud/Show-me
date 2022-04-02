@@ -1,10 +1,10 @@
 import createWelcomePage from '../pages/homePage.js';
-import createPlaylistPage from '../pages/playlistPage.js';
+import createShowListPage from '../pages/showlistPage.js';
 
 
 const routes = [
     { path: 'home', page: createWelcomePage, default: true }, 
-    { path: 'playlist', page: createPlaylistPage},
+    { path: 'showList', page: createShowListPage},
 ];
 
 export default routes;

@@ -1,16 +1,15 @@
-
 * {
-    padding: 0;
-    margin: 0;
-     --light-bg: #212121;
-    --dark-bg: #000000;
-    --bright-green: #20DF64;
-    --white: #FFFFFF;
-    --light-grey: #8B8B8B;
-    --dark-grey: #6b6b6b;
-    font-family: 'Source Sans Pro', sans-serif;
-    color: var(--white);
-    font-size: 18px;
+  padding: 0;
+  margin: 0;
+  --light-bg: #212121;
+  --dark-bg: #000000;
+  --bright-green: #20df64;
+  --white: #ffffff;
+  --light-grey: #8b8b8b;
+  --dark-grey: #6b6b6b;
+  font-family: "Source Sans Pro", sans-serif;
+  color: var(--white);
+  font-size: 18px;
 }
 
 body {
@@ -27,154 +26,267 @@ body {
   margin: auto;
   height: 88vh;
   overflow: hidden;
-  padding-top: 5vh;;
+  padding-top: 5vh;
 }
 
 /* Navbar */
 #navbar-container {
-    width: 100%;
-    background-color: var(--light-bg);
+  width: 100%;
+  background-color: var(--light-bg);
 }
 .navbar {
-    width: 85vw;
-    margin: auto;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 60px;
+  width: 85vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60px;
 }
 
 .logo {
-    width: 1rem;
-    padding: 0px;
-    margin-right: 6px;
+  width: 1rem;
+  padding: 0px;
+  margin-right: 6px;
 }
 
 h1 {
-    font-size: 1.8rem;
-    margin: 0 auto 0 0;
+  font-size: 1.8rem;
+  margin: 0 auto 0 0;
+  padding: 14px;
 }
 
 /* Buttons */
 .button {
-    border: 2px solid transparent;
-    cursor: pointer;
-    background-color: transparent;
-    padding: 14px;
-    font-size: 1.2rem;
-    text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 14px;
+  font-size: 1.2rem;
+  text-decoration: none;
 }
 
 .button:hover {
-   border-top: 2px solid var(--bright-green);
-   filter: hue-rotate(260deg);
-    -webkit-animation: filter-animation 8s infinite;
-    animation: filter-animation 8s infinite;
+  border-top: 2px solid var(--bright-green);
+  filter: hue-rotate(260deg);
+  -webkit-animation: filter-animation 8s infinite;
+  animation: filter-animation 8s infinite;
 }
 
-#get-in-button,
-#get_show_button {
-    border: 2px solid var(--dark-bg);
-    border-radius: 20px;;
-    padding: .6rem 2.8rem;
-    margin: auto;
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--dark-bg);
-    background-color: var(--bright-green);
-    filter: hue-rotate(260deg);
-    -webkit-animation: filter-animation 8s infinite;
-    animation: filter-animation 8s infinite;
+#get-another-button {
+  border: 2px solid var(--dark-bg);
+  border-radius: 20px;
+  padding: 0.6rem 2.8rem;
+  margin: auto;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--dark-bg);
+  background-color: var(--bright-green);
+  filter: hue-rotate(260deg);
+  -webkit-animation: filter-animation 8s infinite;
+  animation: filter-animation 8s infinite;
 }
 
-#get_show_button:hover,
-#get_show_button:focus,
-#get-in-button:hover,
-#get-in-button:focus {
-    color: var(--bright-green);
-    background-color: var(--white);
-    border: 5px solid var(--bright-green);
-    transition: 0.5s;
+#get-show-button {
+  border: 2px solid var(--dark-bg);
+  border-radius: 20px;
+  padding: 0.6rem 2.8rem;
+  margin: 5vh auto;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--dark-bg);
+  background-color: var(--bright-green);
+  filter: hue-rotate(260deg);
+  -webkit-animation: filter-animation 8s infinite;
+  animation: filter-animation 8s infinite;
 }
 
-#get-in-button:active,
-#get_show_button:active {
-    color: var(--dark-bg);
-    background-color: var(--white);
-    transition: 0s;
+#get-show-button:hover,
+#get-show-button:focus {
+  color: var(--bright-green);
+  background-color: var(--white);
+  border: 5px solid var(--bright-green);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#get-another-button:hover,
+#get-another-button:focus {
+  color: var(--bright-green);
+  background-color: var(--white);
+  border: 2px solid var(--bright-green);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#get-another-button:active,
+#get-show-button:active {
+  color: var(--dark-bg);
+  background-color: var(--white);
+  transition: 0s;
 }
 
 /* Welcome page */
 .welcome-img-container {
-    width: 100%;
-    height: 42vh;
-    overflow: hidden;
-    background-color: var(--dark-bg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2vh;
+  width: 100%;
+  height: 42vh;
+  overflow: hidden;
+  background-color: var(--dark-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2vh;
 }
 
 .welcome-img {
-    padding: 6vh 0;
-    width: 65vw;
-    max-width: 1200px;
+  max-width: 1200px;
+  padding: 0;
+  height: 100%;
 }
 
 .banner-container {
-    width: 100%;
-    height: 40vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10vh auto 0;
-    padding-bottom: 4vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8vh auto 0;
+  padding-bottom: 4vh;
 }
 
 .welcome-banner {
-    width: 60%;
-    /* filter: invert(1); */}
+  width: 60%;
+  filter: grayscale(0.8);
+}
+
+/* Show-view Page */
+.show-list-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  border: 2px solid var(--white);
+  background-color: var(--light-bg);
+  margin-top: 2vh;
+  overflow: hidden;
+}
+
+.show-list-page:hover {
+  border: 2px solid var(--white);
+  cursor: pointer;
+  box-shadow: 0px 0px 80px var(--light-grey);
+  transform: scale(1.02);
+}
+
+.show-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  margin-bottom: auto;
+  height: fit-content;
+  width: 30vw;
+}
+
+.show-name {
+  font-size: 2rem;
+  padding: 2vh;
+  margin-bottom: auto;
+}
+
+.show-info img {
+  width: 20vw;
+  margin: auto;
+  padding: 10px 20px 20px 20px;
+  max-height: 450px;
+}
+
+/* Language section */
+.language-selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.language-selection p {
+  font-size: 1.2rem;
+  padding: 20px;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
 /* Media Queries */
+@media screen and (max-width: 800px) {
+  #router-outlet {
+    padding: 0;
+  }
 
-@media screen and (max-width:800px) {
-    .welcome-banner {
+  .welcome-banner {
     width: 180%;
-    }
+  }
 
-    .welcome-img {
+  .welcome-img {
     width: 120vw;
     max-width: 1200px;
     margin-top: 5vh;
-    }
+  }
 
-    .welcome-img-container {
-        height: 30vh;
-    }
+  .welcome-img-container {
+    height: 30vh;
+  }
 
-    .banner-container{
-        height: 45vh;
-        align-items: flex-end;
-        justify-content: center;
-        justify-items: center;
-    }
+  .banner-container {
+    height: 45vh;
+    align-items: flex-end;
+    justify-content: center;
+    justify-items: center;
+  }
 
-    h1 {
-        font-size: 1.2rem;;
-    }
+  h1 {
+    font-size: 1.2rem;
+  }
 
-    .navbar {
+  .navbar {
     width: 95vw;
-    }
+  }
 
-    #get-playlist-button {
+  #get-playlist-button {
     padding: 1rem 2.8rem;
     margin: 5vh 0;
     font-size: 2rem;
     font-weight: bold;
     z-index: 2;
-}
+  }
+
+  #get-another-button {
+    font-size: 1.5rem;
+    margin: 1vh auto;
+  }
+
+  .show-list-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .show-info {
+    display: flex;
+    margin-bottom: 0;
+    width: 80vw;
+  }
+
+  .show-info img {
+    width: 65vw;
+  }
+
+  .show-name {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 300px) {
@@ -187,7 +299,7 @@ h1 {
   }
 
   .welcome-img-container {
-    margin-bottom: 10vh;;
+    margin-bottom: 10vh;
   }
 
   .banner-container {
@@ -196,15 +308,17 @@ h1 {
 }
 
 /* Webkit keyframes */
+
+/* Color animation */
 @-webkit-keyframes filter-animation {
   0% {
     -webkit-filter: hue-rotate(0deg);
   }
-  
+
   50% {
     -webkit-filter: hue-rotate(100deg);
   }
-  
+
   100% {
     -webkit-filter: hue-rotate(0deg);
   }
@@ -214,11 +328,11 @@ h1 {
   0% {
     filter: hue-rotate(0deg);
   }
-  
+
   50% {
     filter: hue-rotate(100deg);
   }
-  
+
   100% {
     filter: hue-rotate(0deg);
   }
