@@ -1,7 +1,7 @@
 const data = {
   loading: false,
   error: null,
-  organization: 'PLaylist-ify',
+  organization: 'Show me',
 };
 
 export default data;

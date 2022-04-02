@@ -3,12 +3,12 @@ import data from './data.js';
 import routes from '../src/pages/routes.js';
 import router from './lib/router.js';
 import log from './lib/logger.js';
-import { createNavbar } from './components/navbar.js';
+import { createNavbar } from './pages/navbar.js';
 
 
 function loadApp() {
   // Set the desired log level
-  log.setLevel('debug');
+  log.setLevel('silly');
   log.info('application', 'started');
 
   const appRoot = document.getElementById('app-root');
