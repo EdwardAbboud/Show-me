@@ -1,5 +1,5 @@
 //@ts-check
-import log from './logger.js';
+import log from "./logger.js";
 
 const HTTP_STATUS_NO_CONTENT = 204;
 
@@ -19,10 +19,10 @@ async function fetchData(url, options = {}) {
   if (options.cache) {
     data = cache.get(url);
     if (data) {
-      log.silly('fetchData', 'cache hit:', url);
+      log.silly("fetchData", "cache hit:", url);
       return data;
     }
-    log.silly('fetchData', 'cache miss:', url);
+    log.silly("fetchData", "cache miss:", url);
   }
 
   const res = await fetch(url);

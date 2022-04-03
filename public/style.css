@@ -203,20 +203,10 @@ h1 {
 }
 
 /* Language section */
-.language-selection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.language-selection p {
-  font-size: 1.2rem;
-  padding: 20px;
-}
-
-input[type="checkbox"] {
-  transform: scale(1.5);
-  cursor: pointer;
+.show-languages {
+  color: var(--white);
+  background-color: var(--light-bg);
+  border: 1px solid var(--white);
 }
 
 /* Media Queries */

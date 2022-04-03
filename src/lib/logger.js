@@ -1,5 +1,5 @@
 // Log levels in increasing severity
-const LEVELS = ['silly', 'debug', 'info', 'warning', 'error', 'fatal', 'none'];
+const LEVELS = ["silly", "debug", "info", "warning", "error", "fatal", "none"];
 
 /**
  * Create a logger object.
@@ -20,13 +20,13 @@ function logger() {
     let logFn;
 
     switch (level) {
-      case 'warn':
+      case "warn":
         logFn = console.warn;
         break;
-      case 'info':
+      case "info":
         logFn = console.info;
         break;
-      case 'error':
+      case "error":
         logFn = console.error;
         break;
       default:
@@ -51,22 +51,22 @@ function logger() {
     isMinLevel,
     log,
     silly(label, ...args) {
-      log('silly', label, ...args);
+      log("silly", label, ...args);
     },
     debug(label, ...args) {
-      log('debug', label, ...args);
+      log("debug", label, ...args);
     },
     info(label, ...args) {
-      log('info', label, ...args);
+      log("info", label, ...args);
     },
     warning(label, ...args) {
-      log('warning', label, ...args);
+      log("warning", label, ...args);
     },
     error(label, ...args) {
-      log('error', label, ...args);
+      log("error", label, ...args);
     },
     fatal(label, ...args) {
-      log('fatal', label, ...args);
+      log("fatal", label, ...args);
     },
   };
 }
