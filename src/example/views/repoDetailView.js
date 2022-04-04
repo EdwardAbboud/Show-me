@@ -1,8 +1,8 @@
-import createContributorListView from './contributorListView.js';
-import createLoadingIndicator from './loadingIndicator.js';
+import createContributorListView from "./contributorListView.js";
+import createLoadingIndicator from "./loadingIndicator.js";
 
 function createRepoDetailView() {
-  const root = document.createElement('div');
+  const root = document.createElement("div");
   root.innerHTML = String.raw`
   <header class="header">
     <div class="header-content">
@@ -14,8 +14,8 @@ function createRepoDetailView() {
   </header>
   `;
 
-  const container = document.createElement('div');
-  container.className = 'repo-detail-container';
+  const container = document.createElement("div");
+  container.className = "repo-detail-container";
   root.appendChild(container);
 
   const loadingIndicator = createLoadingIndicator();
@@ -47,7 +47,7 @@ function createRepoDetailView() {
                 </td>
               <tr>
                 <th>Description:</td>
-                <td>${repo.description || '(none)'}</td>
+                <td>${repo.description || "(none)"}</td>
               </tr>
               <tr>
                 <th>Fork:</td>

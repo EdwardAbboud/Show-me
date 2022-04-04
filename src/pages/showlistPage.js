@@ -1,6 +1,6 @@
 // import log from "../lib/logger.js";
 import router from "../lib/router.js";
-import createShowListView from "../views/showlistView.js";
+import { createShowListView, clearContainer } from "../views/showlistView.js";
 import fetchShow from "../fetchers/showFetcher.js";
 import { genreList, languageList } from "../data.js";
 
@@ -8,6 +8,7 @@ function createShowListPage() {
   const props = {
     onclick: () => {
       getData();
+      clearContainer();
     },
     selectedLang: (e) => {
       selectedLanguage = e.target.value;
