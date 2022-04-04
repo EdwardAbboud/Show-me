@@ -47,10 +47,10 @@ export function createShowListView(props) {
       image = `<img alt="Show poster" src="${show.image.original}"></img>`;
     }
     container.innerHTML = String.raw`
-    <a href="" class="show-info">
-    <h3 class="show-name">${show?.name}</h3>
-    ${image}
-    </a>`;
+    <a target="_blank" href="${show.url}"><div id="myBtn" class="show-info">
+      <h3 class="show-name">${show?.name}</h3>
+      ${image}
+    </div></a>`;
   };
 
   return { root, update };
