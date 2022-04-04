@@ -1,4 +1,3 @@
-// import log from "../lib/logger.js";
 import router from "../lib/router.js";
 import { createShowListView, clearContainer } from "../views/showlistView.js";
 import fetchShow from "../fetchers/showFetcher.js";

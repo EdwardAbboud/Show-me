@@ -1,0 +1,127 @@
+/* Welcome page */
+.welcome-img-container {
+  width: 100%;
+  height: 42vh;
+  overflow: hidden;
+  background-color: var(--dark-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2vh;
+}
+
+.welcome-img {
+  max-width: 1200px;
+  padding: 0;
+  height: 100%;
+}
+
+.banner-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8vh auto 0;
+  padding-bottom: 4vh;
+}
+
+.welcome-banner {
+  width: 60%;
+  filter: grayscale(1);
+}
+
+/* Show-view Page */
+.show-list-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 60vh;
+  margin-top: 2vh;
+  overflow: hidden;
+  background-color: var(--dark-bg);
+  border: 2px solid var(--light-bg);
+}
+
+.show-list-page:hover {
+  border: 2px solid var(--white);
+  cursor: pointer;
+  box-shadow: 0px 0px 120px var(--light-bg);
+  background-color: var(--light-bg);
+  transform: scale(1.02);
+}
+
+.show-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  min-width: 440px;
+  max-width: 440px;
+  margin-bottom: auto;
+  height: fit-content;
+  overflow: hidden;
+}
+
+.show-name {
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 2vh;
+  margin-bottom: auto;
+}
+
+.image-container {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-height: 450px;
+  width: 80%;
+  padding: 0px 20px 10px 20px;
+  margin-bottom: 20px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.show-info img {
+  width: 100%;
+}
+
+/* Language section */
+.user-selected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 20px;
+}
+
+.show-languages,
+.show-genres {
+  color: var(--white);
+  background-color: var(--light-bg);
+  border: 1px solid var(--white);
+}
+.show-languages:hover,
+.show-genres:hover {
+  color: var(--white);
+  background-color: var(--bright-green);
+  border: 1px solid var(--white);
+}
+
+#language,
+#genre {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+}
+
+#language {
+  margin-right: 20px;
+}
+
+.label {
+  padding-bottom: 5px;
+}

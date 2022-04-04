@@ -1,0 +1,111 @@
+/* Media Queries */
+@media screen and (max-width: 800px) {
+  #router-outlet {
+    padding: 0;
+  }
+
+  .welcome-banner {
+    width: 180%;
+  }
+
+  .welcome-img {
+    width: 120vw;
+    max-width: 1200px;
+    margin-top: 5vh;
+  }
+
+  .welcome-img-container {
+    height: 30vh;
+  }
+
+  .banner-container {
+    height: 45vh;
+    align-items: flex-end;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .navbar {
+    width: 95vw;
+  }
+
+  #get-playlist-button {
+    padding: 1rem 2.8rem;
+    margin: 5vh 0;
+    font-size: 2rem;
+    font-weight: bold;
+    z-index: 2;
+  }
+
+  #get-another-button {
+    font-size: 1.5rem;
+    margin: 1vh auto;
+  }
+
+  .show-list-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .show-info {
+    display: flex;
+    margin-bottom: 0;
+    width: 80vw;
+  }
+
+  .show-info img {
+    width: 65vw;
+  }
+
+  .show-name {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  * {
+    font-size: 14px;
+  }
+
+  .welcome-img {
+    width: 80vw;
+  }
+
+  .welcome-img-container {
+    margin-bottom: 10vh;
+  }
+
+  .banner-container {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  #router-outlet {
+    overflow: visible;
+    height: fit-content;
+  }
+
+  .show-list-page {
+    overflow: visible;
+    justify-content: space-between;
+    height: fit-content;
+    max-width: fit-content;
+    margin-bottom: auto;
+  }
+
+  .show-info img {
+    height: 60vh;
+    width: auto;
+  }
+
+  .show-info {
+    box-shadow: none;
+  }
+}

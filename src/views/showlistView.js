@@ -47,17 +47,19 @@ export function createShowListView(props) {
       image = `<img alt="Show poster" src="${show.image.original}"></img>`;
     }
     container.innerHTML = String.raw`
-    <a href="" class="show-info">
-    <h3 class="show-name">${show?.name}</h3>
-    ${image}
-    </a>`;
+    <a target="_blank" href="${show.url}"><div class="show-info">
+      <h3 class="show-name">${show.name}</h3>
+      <div class="image-container">
+        ${image}
+      </div>
+    </div></a>`;
   };
 
   return { root, update };
 }
 
 const rootString = `
-  <div class="user-selected"></div>
+  <div class="user-selected">
     <div id="language">
       <label class="label">Language</label>
       <select class="show-languages">
