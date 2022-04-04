@@ -1,32 +1,42 @@
-function createShowListView(props) {
+import createLoadingIndicator from "./loadingIndicator.js";
+
+export function createShowListView(props) {
   const root = document.createElement("div");
-  // root.classList.add("");
-  root.innerHTML = String.raw`
-  <div>
-    <label class="control-label">Language</label>
-    <select class="show-languages">
-      
-    </select>
-  </div>
-  <button class="button" id="get-another-button">Show me another!</button>
-  <div class="show-list-page"></div>
-  `;
-  const select = root.querySelector(".show-languages");
-  props.languages.forEach((language) => {
-    const option = document.createElement("option");
-    option.value = language;
-    option.textContent = language;
-    select.appendChild(option);
-  });
+  root.innerHTML = String.raw`${rootString}`;
+
   const button = root.querySelector("#get-another-button");
   const container = root.querySelector(".show-list-page");
+  const selectGenre = root.querySelector(".show-genres");
+  const selectLanguage = root.querySelector(".show-languages");
+
+  const createOptions = (query, property) => {
+    const element = root.querySelector(query);
+    property.forEach((item) => {
+      const option = document.createElement("option");
+      option.value = item;
+      option.textContent = item;
+      element.appendChild(option);
+    });
+  };
+
+  createOptions(".show-languages", props.languages);
+  createOptions(".show-genres", props.genres);
 
   button.addEventListener("click", props.onclick);
+  selectLanguage.addEventListener("change", props.selectedLang);
+  selectGenre.addEventListener("change", props.selectedGen);
 
-  const selectLanguage = root.querySelector(".show-languages");
-  selectLanguage.addEventListener("change", props.selected);
+  const loadingIndicator = createLoadingIndicator();
+  container.appendChild(loadingIndicator.root);
 
   const update = (state) => {
+    if (state.loading) {
+      loadingIndicator.root.hidden = false;
+      return;
+    } else {
+      loadingIndicator.root.hidden = true;
+    }
+
     if (state.error || !state.show) {
       return;
     }
@@ -46,4 +56,25 @@ function createShowListView(props) {
   return { root, update };
 }
 
-export default createShowListView;
+const rootString = `
+  <div class="user-selected"></div>
+    <div id="language">
+      <label class="label">Language</label>
+      <select class="show-languages">
+      </select>
+    </div>
+    <div id="genre">
+      <label class="label">Genre</label>
+      <select class="show-genres">
+      </select>
+    </div>
+  </div>
+  <button class="button" id="get-another-button">Show me another!</button>
+  <div class="show-list-page"></div>
+  `;
+
+export const clearContainer = () => {
+  const container = document.querySelector(".show-list-page");
+  const loadingIndicator = createLoadingIndicator();
+  container.innerHTML = loadingIndicator.root.innerHTML;
+};

@@ -7,7 +7,7 @@ import { createNavbar } from "./pages/navbar.js";
 
 function loadApp() {
   // Set the desired log level
-  log.setLevel("silly");
+  log.setLevel("none");
   log.info("application", "started");
 
   const appRoot = document.getElementById("app-root");
