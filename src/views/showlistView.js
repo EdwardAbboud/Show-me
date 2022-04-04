@@ -1,30 +1,29 @@
 function createShowListView(props) {
   const root = document.createElement("div");
-  // root.classList.add("");
-  root.innerHTML = String.raw`
-  <div>
-    <label class="control-label">Language</label>
-    <select class="show-languages">
-      
-    </select>
-  </div>
-  <button class="button" id="get-another-button">Show me another!</button>
-  <div class="show-list-page"></div>
-  `;
-  const select = root.querySelector(".show-languages");
+  root.innerHTML = String.raw`${rootString}`;
+
+  const selectLanguage = root.querySelector(".show-languages");
   props.languages.forEach((language) => {
-    const option = document.createElement("option");
-    option.value = language;
-    option.textContent = language;
-    select.appendChild(option);
+    const lOption = document.createElement("option");
+    lOption.value = language;
+    lOption.textContent = language;
+    selectLanguage.appendChild(lOption);
   });
+
+  const selectGenre = root.querySelector(".show-genres");
+  props.genres.forEach((genre) => {
+    const gOption = document.createElement("option");
+    gOption.value = genre;
+    gOption.textContent = genre;
+    selectGenre.appendChild(gOption);
+  });
+
   const button = root.querySelector("#get-another-button");
   const container = root.querySelector(".show-list-page");
 
   button.addEventListener("click", props.onclick);
-
-  const selectLanguage = root.querySelector(".show-languages");
-  selectLanguage.addEventListener("change", props.selected);
+  selectLanguage.addEventListener("change", props.selectedLang);
+  selectGenre.addEventListener("change", props.selectedGen);
 
   const update = (state) => {
     if (state.error || !state.show) {
@@ -47,3 +46,20 @@ function createShowListView(props) {
 }
 
 export default createShowListView;
+
+const rootString = `
+  <div class="user-selected"></div>
+    <div id="language">
+      <label class="label">Language</label>
+      <select class="show-languages">
+      </select>
+    </div>
+    <div id="genre">
+      <label class="label">Genre</label>
+      <select class="show-genres">
+      </select>
+    </div>
+  </div>
+  <button class="button" id="get-another-button">Show me another!</button>
+  <div class="show-list-page"></div>
+  `;
