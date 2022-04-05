@@ -4,7 +4,7 @@ This project utilizes the TVmaze API. If you would like to checkout their docume
 
 ### Description
 
-The user is able to, through a low-page count app, find a random tv-show to watch. It's a problem/need that many of us are known to have when finishing binge-watching something. Many people also endlessly scroll through netflix's library and spend too much time figuring out what can be good to watch. Through minimal criteria (language and genre), the user can help the app make better calls to the API in order to get closer to satisfying their needs. If they are interested to learn more about the show, the user is able to then follow a link to the TVmaze page of the show.
+The user is able to, through a low page count app, find a random tv-show to watch. It's a problem/need that many of us are known to have when finishing binge-watching something. Many people also endlessly scroll through netflix's library and spend too much time figuring out what can be good to watch. Through minimal criteria (language and genre), the user can help the app make better calls to the API in order to get closer to satisfying their needs. If they are interested to learn more about the show, the user is able to then follow a link to the TVmaze page of the show.
 
 ## Screenshot
 
