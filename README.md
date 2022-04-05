@@ -1,7 +1,6 @@
 # Show me
 
-This project utilizes the TVmaze API. If you would like to checkout their documentation you may do so [here](https://www.tvmaze.com/api)
-This project was actualized as a learning project and not for profit. Copyright of the data available is of course owned by TVmaze.
+This project utilizes the TVmaze API. If you would like to checkout their documentation you may do so [here](https://www.tvmaze.com/api). This project was actualized as a learning project and not for profit. Copyright of the data available is of course owned by TVmaze.
 
 ### Description
 
