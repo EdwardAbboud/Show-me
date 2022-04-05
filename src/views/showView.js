@@ -54,6 +54,13 @@ export function createShowListView(props) {
       image = `<img alt="No poster" src="./public/assets/no-image.png"></img>`;
     }
 
+    let summary = "";
+    if (show.summary) {
+      summary = `${show.summary}`;
+    } else {
+      summary = `<p>No summary has been provided</p>`;
+    }
+
     container.innerHTML = String.raw`
     <div class="hide-me">
       <div class="show-info">
@@ -66,7 +73,7 @@ export function createShowListView(props) {
     <div class="show-more-information hidden">
       <h3 class="show-name">${show.name}</h3>
       <div id="description">
-        ${show.summary}
+        ${summary}
       </div>
       <p>Genres: ${show.genres}</p>
       <p>Status: ${show.status}</p>
