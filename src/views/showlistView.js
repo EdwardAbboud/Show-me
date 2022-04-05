@@ -48,10 +48,10 @@ export function createShowListView(props) {
     }
     container.innerHTML = String.raw`
     <a target="_blank" href="${show.url}"><div class="show-info">
-      <h3 class="show-name">${show.name}</h3>
       <div class="image-container">
         ${image}
       </div>
+      <h3 class="show-name">${show.name}</h3>
     </div></a>`;
   };
 
@@ -70,6 +70,9 @@ const rootString = `
       <select class="show-genres">
       </select>
     </div>
+    <span class="info-container" title="If loading your show is taking time, it may due to the Language/Genre combination. Please wait or edit your criteria">
+      <img id="info-icon"src="./public/assets/info-circle.png">
+    </span>
   </div>
   <button class="button" id="get-another-button">Show me another!</button>
   <div class="show-list-page"></div>

@@ -19,13 +19,25 @@ body {
 #router-outlet {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   margin: auto;
   height: 88vh;
   overflow: hidden;
   padding-top: 5vh;
+}
+
+/* Info icon */
+#info-icon {
+  filter: invert(1);
+  width: 20px;
+  margin: 30px 0px 0px 15px;
+}
+
+#info-icon:hover,
+#info-icon:focus {
+  cursor: help;
 }
 
 /* Loading */
