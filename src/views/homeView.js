@@ -1,3 +1,4 @@
+// this is what the user sees on home page
 function createHomeView() {
   const root = document.createElement("div");
   root.innerHTML = String.raw`

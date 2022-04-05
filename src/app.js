@@ -3,7 +3,7 @@ import data from "./data.js";
 import routes from "../src/pages/routes.js";
 import router from "./lib/router.js";
 import log from "./lib/logger.js";
-import { createNavbar } from "./pages/navbar.js";
+import createNavbar from "./views/navbar.js";
 
 function loadApp() {
   // Set the desired log level
@@ -21,7 +21,7 @@ function loadApp() {
   // Start the router
   router.start(routes, routerOutlet, data);
 
-  // Initialize the navbar
+  // Initialize the navbar once
   createNavbar();
 }
 

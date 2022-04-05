@@ -1,6 +1,7 @@
 import createLoadingIndicator from "./loadingIndicator.js";
 
 export function createShowListView(props) {
+  // create the main div
   const root = document.createElement("div");
   root.innerHTML = String.raw`${rootString}`;
 
@@ -9,6 +10,7 @@ export function createShowListView(props) {
   const selectGenre = root.querySelector(".show-genres");
   const selectLanguage = root.querySelector(".show-languages");
 
+  // Create more select-options
   const createOptions = (query, property) => {
     const element = root.querySelector(query);
     property.forEach((item) => {
@@ -22,6 +24,7 @@ export function createShowListView(props) {
   createOptions(".show-languages", props.languages);
   createOptions(".show-genres", props.genres);
 
+  // event listeners
   button.addEventListener("click", props.onclick);
   selectLanguage.addEventListener("change", props.selectedLang);
   selectGenre.addEventListener("change", props.selectedGen);
@@ -33,18 +36,21 @@ export function createShowListView(props) {
     if (state.loading) {
       loadingIndicator.root.hidden = false;
       return;
-    } else {
-      loadingIndicator.root.hidden = true;
     }
+
+    loadingIndicator.root.hidden = true;
 
     if (state.error || !state.show) {
       return;
     }
 
     const { show } = state;
+
     let image = "";
     if (show.image) {
       image = `<img alt="Show poster" src="${show.image.original}"></img>`;
+    } else {
+      image = `<img alt="No poster" src="../public/assets/no-image.png"></img>`;
     }
     container.innerHTML = String.raw`
     <a target="_blank" href="${show.url}"><div class="show-info">
@@ -58,6 +64,7 @@ export function createShowListView(props) {
   return { root, update };
 }
 
+// html for the root 'div' element
 const rootString = `
   <div class="user-selected">
     <div id="language">
@@ -78,6 +85,7 @@ const rootString = `
   <div class="show-list-page"></div>
   `;
 
+// clean up the current show when another is requested
 export const clearContainer = () => {
   const container = document.querySelector(".show-list-page");
   const loadingIndicator = createLoadingIndicator();
