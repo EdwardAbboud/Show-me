@@ -1,3 +1,4 @@
+// create a loading indicator when called
 function createLoadingIndicator() {
   const root = document.createElement("div");
 

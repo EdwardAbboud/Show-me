@@ -2,6 +2,8 @@
 @media screen and (max-width: 800px) {
   #router-outlet {
     padding: 0;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   .welcome-banner {
@@ -23,25 +25,20 @@
     align-items: flex-end;
     justify-content: center;
     justify-items: center;
+    margin-top: 30px;
+    padding: 0px;
   }
 
   h1 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .navbar {
     width: 95vw;
   }
 
-  #get-playlist-button {
-    padding: 1rem 2.8rem;
-    margin: 5vh 0;
-    font-size: 2rem;
-    font-weight: bold;
-    z-index: 2;
-  }
-
-  #get-another-button {
+  #get-another-button,
+  #get-show-button {
     font-size: 1.5rem;
     margin: 1vh auto;
   }
@@ -65,6 +62,45 @@
 
   .show-name {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #router-outlet {
+    overflow-x: hidden;
+    overflow-y: visible;
+    padding: 10px;
+  }
+
+  #get-another-button {
+    font-size: 1.5rem;
+    margin: 1vh auto;
+  }
+
+  .show-list-page {
+    border: none;
+    overflow-y: auto;
+  }
+
+  .show-list-page:hover {
+    border: none;
+  }
+
+  .image-container {
+    height: auto;
+  }
+
+  .image-container img {
+    max-height: 45vh;
+    width: auto;
+  }
+
+  .show-info {
+    overflow-y: auto;
+  }
+
+  .show-name {
+    font-size: 1.2rem;
   }
 }
 
