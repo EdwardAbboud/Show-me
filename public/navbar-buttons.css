@@ -2,6 +2,7 @@
 #navbar-container {
   width: 100%;
   background-color: var(--light-bg);
+  overflow: hidden;
 }
 .navbar {
   width: 85vw;
