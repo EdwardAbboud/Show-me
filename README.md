@@ -9,7 +9,7 @@ The user is able to, through a low-page count app, find a random tv-show to watc
 
 ## Screenshot
 
-(https://github.com/EdwardAbboud/Show-me/blob/main/public/screenshots/screenshot-showPage.png)
+![Screenshot of ShowlistView](https://github.com/EdwardAbboud/Show-me/blob/main/public/screenshots/screenshot-showPage.png "screenshot of app")
 
 ## Folder Structure
 
