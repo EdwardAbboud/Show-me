@@ -93,7 +93,7 @@ const rootString = `
       </select>
     </div>
     <span class="info-container" title="If loading your show is taking time, it may be due to the Language/Genre combination. Please wait or edit your criteria">
-      <img id="info-icon"src="../public/assets/info-circle.png">
+      <img id="info-icon"src="./public/assets/info-circle.png">
     </span>
   </div>
   <button class="button" id="get-another-button">Show me another!</button>
