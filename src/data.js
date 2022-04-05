@@ -14,6 +14,22 @@ export const languageList = [
   "Russian",
   "Dutch",
   "German",
+  "Arabic",
+  "Turkish",
+  "Portuguese",
 ];
 
-export const genreList = ["Comedy", "Romance", "Drama", "Crime", "Action"];
+export const genreList = [
+  "Comedy",
+  "Romance",
+  "Drama",
+  "Crime",
+  "Action",
+  "Food",
+  "Travel",
+  "Family",
+  "Horror",
+  "Nature",
+  "Children",
+  "Music",
+];

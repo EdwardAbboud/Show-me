@@ -28,6 +28,7 @@ export function createShowListView(props) {
   button.addEventListener("click", props.onclick);
   selectLanguage.addEventListener("change", props.selectedLang);
   selectGenre.addEventListener("change", props.selectedGen);
+  container.addEventListener("click", props.clickedShow);
 
   const loadingIndicator = createLoadingIndicator();
   container.appendChild(loadingIndicator.root);
@@ -52,13 +53,27 @@ export function createShowListView(props) {
     } else {
       image = `<img alt="No poster" src="../public/assets/no-image.png"></img>`;
     }
+
     container.innerHTML = String.raw`
-    <a target="_blank" href="${show.url}"><div class="show-info">
-      <div class="image-container">
-        ${image}
-      </div>
+    <div class="hide-me">
+      <div class="show-info">
+        <div class="image-container">
+          ${image}
+        </div>
+        <h3 class="show-name">${show.name}</h3>
+    </div>
+    </div>
+    <div class="show-more-information hidden">
       <h3 class="show-name">${show.name}</h3>
-    </div></a>`;
+      <div id="description">
+        ${show.summary}
+      </div>
+      <p>Genres: ${show.genres}</p>
+      <p>Status: ${show.status}</p>
+      <p id="premiered">Premiered: ${show.premiered}</p>
+      <a id="external-link" target="_blank" href="${show.url}" >GO TO SHOW PAGE</a>
+    </div>
+    `;
   };
 
   return { root, update };
@@ -77,7 +92,7 @@ const rootString = `
       <select class="show-genres">
       </select>
     </div>
-    <span class="info-container" title="If loading your show is taking time, it may due to the Language/Genre combination. Please wait or edit your criteria">
+    <span class="info-container" title="If loading your show is taking time, it may be due to the Language/Genre combination. Please wait or edit your criteria">
       <img id="info-icon"src="./public/assets/info-circle.png">
     </span>
   </div>
@@ -90,4 +105,25 @@ export const clearContainer = () => {
   const container = document.querySelector(".show-list-page");
   const loadingIndicator = createLoadingIndicator();
   container.innerHTML = loadingIndicator.root.innerHTML;
+};
+
+// Hide the poster view
+export const switchView = () => {
+  const container = document.querySelector(".show-list-page");
+  const showView = container.querySelector(".hide-me");
+  const showInfo = container.querySelector(".show-more-information");
+
+  showView.classList.add("hidden");
+  showInfo.classList.remove("hidden");
+};
+
+// Hide the description view
+export const switchBack = () => {
+  const container = document.querySelector(".show-list-page");
+  const showView = container.querySelector(".hide-me");
+  const showInfo = container.querySelector(".show-more-information");
+
+  showView.classList.remove("hidden");
+  showInfo.classList.add("hidden");
+  console.log("element is now hidden");
 };
