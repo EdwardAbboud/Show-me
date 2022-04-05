@@ -72,6 +72,10 @@
     padding: 10px;
   }
 
+  .navbar {
+    height: 40px;
+  }
+
   #get-another-button {
     font-size: 1.5rem;
     margin: 1vh auto;
@@ -101,6 +105,12 @@
 
   .show-name {
     font-size: 1.2rem;
+  }
+
+  #description {
+    height: 200px;
+    overflow: auto;
+    margin-bottom: 10px;
   }
 }
 
