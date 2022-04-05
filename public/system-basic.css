@@ -28,6 +28,10 @@ body {
   padding-top: 5vh;
 }
 
+.hidden {
+  display: none;
+}
+
 /* Info icon */
 #info-icon {
   filter: invert(1);

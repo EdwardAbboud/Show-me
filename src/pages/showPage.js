@@ -1,15 +1,24 @@
 import router from "../lib/router.js";
-import { createShowListView, clearContainer } from "../views/showlistView.js";
+import {
+  createShowListView,
+  clearContainer,
+  switchView,
+  switchBack,
+} from "../views/showView.js";
 import fetchShow from "../fetchers/showFetcher.js";
 import { genreList, languageList } from "../data.js";
 
 // creates the functionality of the page
 function createShowListPage() {
-  // these props are assigned eventListeners
+  // these props are assigned eventListeners and their functions
   const props = {
     onclick: () => {
       getData();
       clearContainer();
+    },
+    clickedShow: () => {
+      clickNum += 1;
+      viewSwitcher();
     },
     selectedLang: (e) => {
       selectedLanguage = e.target.value;
@@ -20,9 +29,20 @@ function createShowListPage() {
     languages: languageList,
     genres: genreList,
   };
+
   // default language and genre
   let selectedLanguage = props.languages[0];
   let selectedGenre = props.genres[0];
+  let clickNum = 0;
+
+  // Change show view
+  const viewSwitcher = () => {
+    if (clickNum % 2 !== 0) {
+      switchView();
+    } else {
+      switchBack();
+    }
+  };
 
   const showView = createShowListView(props);
 

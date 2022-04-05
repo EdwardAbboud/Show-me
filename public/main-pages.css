@@ -90,6 +90,43 @@
   width: 100%;
 }
 
+/* showInfo View */
+.show-more-information {
+  width: 440px;
+  margin-bottom: auto;
+  cursor: pointer;
+}
+
+.show-more-information p {
+  text-align: left;
+  max-width: 80%;
+  margin: auto;
+  padding-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+#description {
+  height: 300px;
+  overflow: auto;
+  margin-bottom: 10px;
+}
+
+#premiered {
+  margin-bottom: 30px;
+}
+
+#external-link {
+  color: var(--bright-green);
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+a#external-link:hover,
+a#external-link:focus {
+  text-decoration: underline;
+  color: var(--white);
+}
+
 /* Language section */
 .user-selected {
   display: flex;
