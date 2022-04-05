@@ -51,7 +51,7 @@ export function createShowListView(props) {
     if (show.image) {
       image = `<img alt="Show poster" src="${show.image.original}"></img>`;
     } else {
-      image = `<img alt="No poster" src="../public/assets/no-image.png"></img>`;
+      image = `<img alt="No poster" src="./public/assets/no-image.png"></img>`;
     }
 
     container.innerHTML = String.raw`

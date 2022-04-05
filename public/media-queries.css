@@ -103,6 +103,10 @@
     overflow-y: auto;
   }
 
+  #info-icon {
+    display: none;
+  }
+
   .show-name {
     font-size: 1.2rem;
   }
